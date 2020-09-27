@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  font-family: "Poiret One", cursive;
+}
+
+p#result > span {
+  display: inline-block;
+  color: red;
+  text-align: center;
+  animation-name: resultAnimation;
+  animation-duration: 1s;
+}
+
+div#progress-indicator-wrapper {
+  background-color: rgba(0, 0, 255, 0.35);
+}
+
+div#progress-indicator {
+  width: 10vw;
+  height: 2.5vh;
+  background-color: blue;
+  border-radius: 5px;
+  animation-name: progressAnimation;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes progressAnimation {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 90vw;
+  }
+}
+
+div#content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main#content {
+  height: 100vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main#content > button#fetchBtn {
+  margin-top: 10px;
+  font-family: "Poiret One", cursive;
+
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border-radius: 15px;
+  border: none;
+
+  background-color: rgba(0, 0, 255, 0.35);
+  color: #ffffff;
+  border-color: transparent;
+
+  transition: background-color 0.5s;
+}
+
+main#content > button#fetchBtn:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes resultAnimation {
+  from {
+    transform: scale(0.1, 0.1);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
