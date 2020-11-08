@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <title>Amazing app</title>
   </head>
   <body>
     <div id="progress-indicator-wrapper">
@@ -16,9 +19,14 @@
     <div id="content-wrapper">
       <main id="content">
         <p id="result">Result will be here...</p>
-        <button id="fetchBtn" onclick="fetchRandomDate()">
-          Fetch random date
-        </button>
+        <div id="btn-wrapper">
+          <button id="fetchBtn" class="action-btn" onclick="fetchRandomDate()">
+            Fetch random date
+          </button>
+          <button id="randBtn" class="action-btn" onclick="fetchRandomNumber()">
+            Fetch random number
+          </button>
+        </div>
       </main>
     </div>
 

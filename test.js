@@ -1,12 +1,16 @@
-function displayText(mouseEvent) {
-  console.log("Kliknięto w przycisk", mouseEvent);
+function btnClickHandler() {
+  const p = document.createElement("p");
+  p.innerText = "Hello SDA from JS";
+  document.getElementById("container").appendChild(p);
+  setTimeout(veryExpensiveFunction, 0);
 }
 
-// const elem = document.getElementById("id-button");
-// elem.addEventListener("click", displayText);
-
-function onMouseMove(event) {
-  console.log(
-    `mouse move on clientX ${event.clientX} and clientY ${event.clientY}`
-  );
+function veryExpensiveFunction() {
+  let sum = 0;
+  for (var i = 0; i < 100000000; i++) {
+    const c = (((i * 5) / 8) % 12) + ((5000 * 8945) % 32);
+    const c1 = c / 100;
+    sum += c1;
+  }
+  console.log(sum);
 }

@@ -15,6 +15,7 @@ p#result > span {
   text-align: center;
   animation-name: resultAnimation;
   animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 div#progress-indicator-wrapper {
@@ -57,9 +58,10 @@ main#content {
   align-items: center;
 }
 
-main#content > button#fetchBtn {
+main#content button.action-btn {
   margin-top: 10px;
   font-family: "Poiret One", cursive;
+  font-size: 1rem;
 
   letter-spacing: 2px;
   font-weight: bold;
@@ -75,7 +77,7 @@ main#content > button#fetchBtn {
   transition: background-color 0.5s;
 }
 
-main#content > button#fetchBtn:hover {
+main#content button.action-btn:hover {
   background-color: blue;
   cursor: pointer;
 }
@@ -92,3 +94,64 @@ main#content > button#fetchBtn:hover {
     transform: scale(1, 1);
   }
 }
+
+/* media queries */
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  html {
+    font-size: 30px;
+  }
+
+  p#result {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  div#btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* @media screen and (min-width: 1200px) {
+  div#btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+} */
+
+/* @media only screen and (min-width: 1201px) {
+  div#btn-wrapper {
+    display: block;
+  }
+} */
+
+/* @media only screen and (min-width: 1600px) {
+  div#btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  div#btn-wrapper {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+} */

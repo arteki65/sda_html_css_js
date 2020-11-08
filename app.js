@@ -1,10 +1,16 @@
-// showProgressIndicator();
-
 function fetchRandomDate() {
+  handleHttp("http://numbersapi.com/random/date");
+}
+
+function fetchRandomNumber() {
+  handleHttp("http://numbersapi.com/random/math");
+}
+
+function handleHttp(url) {
   showProgressIndicator();
-  fetch("http://numbersapi.com/random/date")
+  fetch(url)
     .then((response) => response.text())
-    .then((text) => setTimeout(() => displayResult(text, true), 500))
+    .then((text) => displayResult(text, true))
     .catch(handleError);
 }
 
